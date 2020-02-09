@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './header/Header';
 import Nav from './nav/Nav';
+import Main from './main/Main';
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
 
       <section className="aside-main">
         <Nav />
+
+        <Main />
       </section>
     </div>
   );
