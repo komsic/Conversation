@@ -1,0 +1,46 @@
+.conversations__item {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: .8125rem;
+  border-bottom: 1px solid #e9edf0;
+}
+.conversations__item:last-of-type {
+  border-bottom-width: 0;
+}
+.conversations__item > .conversation__body {
+  margin-left: .5rem;
+}
+.conversation__body > * + * {
+  margin-top: .375rem;
+}
+.conversation__body > .sender {
+  font-size: .875rem;
+  font-weight: 500;
+}
+.conversation__body > .title {
+  font-size: .8125rem;
+}
+.conversation__body > .body {
+  font-size: .75rem;
+  color: #595e8a;
+}
+.conversation__meta > .time {
+  text-align: right;
+  color: #5e6c84;
+  opacity: 0.5;
+  font-size: .625rem;
+}
+.conversation__meta > div {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .4375rem;
+}
+.conversation__meta > div > .notification {
+  text-align: right;
+  font-size: 0.575rem;
+  display: inline-block;
+  background-color: #6554c0;
+  color: #feffff;
+  padding: .125rem .25rem;
+  border-radius: 50%;
+}

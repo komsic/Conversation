@@ -1,0 +1,16 @@
+.filter-controls-item {
+  padding: .125rem .6875rem;
+  border-radius: .5625rem;
+  display: block;
+  color: #595e8a;
+  border: none;
+  background-color: transparent;
+}
+.filter-controls-item.active {
+  background-color: #f6fafd;
+  color: #6554c0;
+}
+
+.conversations > .conversations__item + .conversations__item {
+  margin-top: .8125rem;
+}
