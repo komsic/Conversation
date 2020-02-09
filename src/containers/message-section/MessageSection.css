@@ -1,0 +1,40 @@
+.message-list {
+  flex: 1;
+  padding: 1.1875rem 2.78125rem 1.0625rem 2.03125rem;
+  border-right: 1px solid #e9edf0;
+}
+.message-list > h5 {
+  font-size: .9375rem;
+  font-weight: bold;
+  margin-bottom: 3.1875rem;
+}
+.message-list > .message__item + .message__item {
+  margin-top: 1.25rem;
+}
+.message-list > .message__compose {
+  margin-top: 6.625rem;
+  height: 5.3125rem;
+  border-radius: .625rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+  border: 1px solid #e9edf0;
+  padding: 1rem;
+  position: relative;
+}
+.message-list > .message__compose > textarea {
+  width: 100%;
+  font-size: .875rem;
+  resize: none;
+  border: none;
+}
+.message-list > .message__compose > textarea:active,
+.message-list > .message__compose > textarea:focus {
+  outline: none;
+}
+.message-list > .message__compose > textarea::placeholder {
+  color: #595e8a;
+}
+.message__compose > img {
+  position: absolute;
+  bottom: 1.1875rem;
+  left: 1rem;
+}

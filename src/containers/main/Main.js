@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.css';
+import Message from '../message/Message';
 import Conversation from '../conversation/Conversation';
 
 const Main = () => (
@@ -8,6 +9,8 @@ const Main = () => (
 
     <section className="main__body">
       <Conversation />
+
+      <Message />
     </section>
   </main>
 );

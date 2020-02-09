@@ -1,0 +1,38 @@
+.message-control > .left {
+  display: flex;
+  align-items: center;
+}
+
+.message-control > .left > button {
+  border: none;
+  background-color: transparent;
+}
+.message-control > .right {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  display: flex;
+  align-items: center;
+}
+.message-control > .right > .assign-users {
+  padding: .1875rem;
+  border-radius: 0.8375rem;
+  border: 1px solid #e9edf0;
+}
+.message-control > .right > .assign-users > img,
+.message-control > .right > img {
+  display: inline-block;
+  border-radius: 50%;
+  height: 1.3125rem;
+  vertical-align: middle;
+}
+.message-control > .right > .assign-users > img + img {
+  margin-left: -.25rem;
+}
+.message-control > .right > p {
+  padding: .25rem 1rem;
+  border-radius: 0.7125rem;
+  border: 1.2px solid #e9edf0;
+  margin-right: .375rem;
+  margin-left: .375rem;
+  font-size: .75rem;
+}
