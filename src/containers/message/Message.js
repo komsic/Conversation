@@ -6,6 +6,7 @@ import archive from '../../assets/imgs/archive.svg';
 import more from '../../assets/imgs/more.svg';
 import profileLogo from '../../assets/imgs/komsic.jpg';
 import MessageSection from '../message-section/MessageSection';
+import CommentSection from './../comment-section/CommentSection';
 
 const Message = () => (
   <section className="main__message">
@@ -42,6 +43,8 @@ const Message = () => (
 
     <section className="message">
       <MessageSection />
+
+      <CommentSection />
     </section>
   </section>
 );

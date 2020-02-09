@@ -1,0 +1,52 @@
+.comment-list {
+  padding: 1.625rem 1rem 1.0625rem .625rem;
+  display: flex;
+  flex-direction: column;
+}
+.comment-list > h5 {
+  font-size: .9375rem;
+  font-weight: bold;
+}
+.comment-list > .comment-item {
+  display: flex;
+  align-items: flex-start;
+  margin-top: .9375rem;
+}
+.comment-item > img,
+.comment-compose > img {
+  border-radius: 50%;
+  height: 1.75rem;
+  margin-top: .1875rem;
+}
+.comment-compose {
+  flex: 1;
+
+  display: flex;
+  align-items: flex-end;
+}
+.comment-compose > div {
+  position: relative;
+  flex: 1;
+  margin-left: .3125rem;
+}
+.comment-compose > div > input {
+  width: 100%;
+  padding: .625rem .6875rem;
+  border-radius: 1.5rem;
+  background-color: #f6fafd;
+  border: none;
+  font-size: .75rem;
+}
+.comment-compose > div > div {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
+  background-color: #6554c0;
+  padding: .375rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 1.0625rem;
+  top: .375rem;
+}
+.comment-compose > div > div > img {
+  height: .5625rem;
+  margin-top: 0;
+}

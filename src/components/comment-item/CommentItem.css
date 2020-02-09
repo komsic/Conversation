@@ -1,0 +1,9 @@
+.comment-item > p {
+  width: 14.1875rem;
+  border-radius: 1.5rem;
+  background-color: #f6fafd;
+  margin-left: .3125rem;
+  padding: .6875rem .625rem;
+  color: #595e8a;
+  font-size: .75rem;
+}
