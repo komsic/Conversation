@@ -2,8 +2,8 @@ import React from 'react';
 import './MessageItem.css';
 import reply from '../../assets/imgs/reply.svg';
 
-const MessageItem = ({ author, body, time, receipt, main }) => (
-  <div className="message__item">
+const MessageItem = ({ author, body, time, receipt, main, onClick, tabIndex }) => (
+  <div className="message__item" onClick={onClick} tabIndex={tabIndex}>
     <div className="m-header">
       <h6>{author}</h6>
 
@@ -15,7 +15,7 @@ const MessageItem = ({ author, body, time, receipt, main }) => (
       )}
     </div>
 
-    <p className="m-body">{body}</p>
+    <p className={`m-body ${main ? 'm-main-body' : ''}`}>{body}</p>
 
     <div className="m-footer">
       <p className={`m-time ${main ? 'm-main-time' : ''}`}>{time}</p>

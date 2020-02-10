@@ -1,3 +1,12 @@
+.message__item:focus, .message__item:hover {
+  background-color: #f4f4f4;
+  outline: none;
+}
+.message__item:first-of-type:focus,
+.message__item:first-of-type:hover {
+  background-color: transparent;
+  outline: none;
+}
 .m-header {
   display: flex;
   justify-content: space-between;
@@ -19,19 +28,19 @@
 }
 
 .message__item > .m-body {
-  background-color: #fbfdff;
+  background-color: #6554c0;
   padding: .6875rem .875rem;
   margin-bottom: .625rem;
   margin-top: .625rem;
-  color: #595e8a;
+  color: #ffffff;
   font-size: .875rem;
   line-height: 1.56;
   border: 1px solid #e9edf0;
   border-radius: .625rem .625rem .625rem 0;
 }
-.message__item > .m-body--first {
-  background-color: #6554c0;
-  color: #ffffff;
+.message__item > .m-main-body {
+  background-color: #fbfdff;
+  color: #595e8a;
 }
 .message__item > .m-footer {
   color: #5e6c84;
