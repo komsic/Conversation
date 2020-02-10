@@ -6,6 +6,10 @@
   border: none;
   background-color: transparent;
 }
+.filter-controls-item:hover,
+.filter-controls-item:focus {
+  text-decoration: underline;
+}
 .filter-controls-item.active {
   background-color: #f6fafd;
   color: #6554c0;

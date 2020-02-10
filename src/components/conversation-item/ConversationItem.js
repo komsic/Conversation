@@ -19,15 +19,15 @@ const getImageType = (type) => {
 };
 
 const ConversationItem = ({
-  type, sender, title, body, time, haveAttachment, newNotification,
+  type, sender, title, body, time, haveAttachment, newNotification, tabIndex, onClick,
 }) => (
-  <div className="conversations__item">
-    <img src={getImageType(type)} alt="twitter"/>
+  <div className="conversations__item" tabIndex={tabIndex} onClick={onClick}>
+    <img src={getImageType(type)} alt="social"/>
 
     <div className="conversation__body">
       <h3 className="sender">{sender}</h3>
 
-      <p className="title">{title}</p>
+      <p className="title">{`${title.substring(0, 38)}...`}</p>
 
       <p className="body">{body}</p>
     </div>

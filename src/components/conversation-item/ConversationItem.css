@@ -4,6 +4,13 @@
   padding-bottom: .8125rem;
   border-bottom: 1px solid #e9edf0;
 }
+.conversations__item:hover {
+  cursor: default;
+}
+.conversations__item:focus, .conversations__item:hover {
+  background-color: #f4f4f4;
+  outline: none;
+}
 .conversations__item:last-of-type {
   border-bottom-width: 0;
 }

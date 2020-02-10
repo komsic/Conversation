@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.css';
 import Message from '../message/Message';
 import Conversation from '../conversation/Conversation';
 
-const Main = () => (
-  <main className="main">
-    <h1>Conversations</h1>
+const Main = () => {
+  const [selectedConversation, setSelectedConversation] = useState({
+    sender: '', id: '', title: '', body: '', time: '',
+  });
 
-    <section className="main__body">
-      <Conversation />
+  return (
+    <main className="main">
+      <h1>Conversations</h1>
 
-      <Message />
-    </section>
-  </main>
-);
+      <section className="main__body">
+        <Conversation setSelectedConversation={setSelectedConversation} />
+
+        <Message selectedConversation={selectedConversation}/>
+      </section>
+    </main>
+  );
+};
 
 export default Main;
