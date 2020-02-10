@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/imgs/logo.svg';
 import dropdown from '../../assets/imgs/dropdown.svg';
+import ServiceContext from '../../ServiceContext';
 
-const Header = () => (
-  <header className="header">
-    <img src={logo} alt="logo"/>
+const Header = () => {
+  const [organizationName, setOrganizationName] = useState('Organization Name');
+  const service = useContext(ServiceContext);
 
-    <div className="header__more">
-      <p className="organization-logo">S</p>
+  useEffect(() => {
+    setOrganizationName(service.getOrganizationName());
+  }, [setOrganizationName, service]);
 
-      <p className="organization-name">Organization Name</p>
+  return (
+    <header className="header">
+      <img src={logo} alt="logo"/>
 
-      <img src={dropdown} alt="dropdown"/>
-    </div>
-  </header>
-);
+      <div className="header__more">
+        <p className="organization-logo">{organizationName[0]}</p>
+
+        <p className="organization-name">{organizationName}</p>
+
+        <img src={dropdown} alt="dropdown"/>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
