@@ -3,10 +3,11 @@ import './MessageSection.css';
 import MessageItem from './../../components/message-item/MessageItem';
 import attachment from '../../assets/imgs/attachment.svg';
 
-const MessageSection = ({ messages, setSelectedMessageId, selectedConversation: {
+const MessageSection = ({
+  messages, toggleDisplay, setSelectedMessageId, selectedConversation: {
   sender, id, title, body, time,
 } }) => (
-  <div className="message-list">
+  <div className={`message-list ${!toggleDisplay ? 'close' : ''}`}>
     <h5>{title}</h5>
 
     {[{

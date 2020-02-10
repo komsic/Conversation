@@ -3,7 +3,7 @@ import './Conversation.css';
 import ConversationItem from './../../components/conversation-item/ConversationItem';
 import ServiceContext from './../../ServiceContext';
 
-const Conversation = ({ setSelectedConversation }) => {
+const Conversation = ({ setSelectedConversation, sStatus, mStatus, selectedConversation }) => {
   const [conversations, setConversations] = useState([]);
   const [filter, setFilter] = useState('open');
   const service = useContext(ServiceContext);
@@ -11,8 +11,8 @@ const Conversation = ({ setSelectedConversation }) => {
   useEffect(() => {
     const cons = [...service.getConservations(filter)];
     setConversations(cons);
-    setSelectedConversation(cons[0]);
-  }, [setConversations, service, filter, setSelectedConversation]);
+    if (!selectedConversation.id) setSelectedConversation(cons[0]);
+  }, [setConversations, service, filter, setSelectedConversation, selectedConversation]);
 
   const handleFilterControlClick = (name) => {
     setFilter(name);
@@ -20,7 +20,9 @@ const Conversation = ({ setSelectedConversation }) => {
 
   const filterControls = ['Open', 'Archived', 'Snoozed', 'Trash'];
   return (
-    <section className="main__conversations">
+    <section
+      className={`main__conversations ${sStatus ? 'close' : ''} ${mStatus ? '' : 'm-close'}`}
+    >
       <section className="filter-controls">
         {filterControls.map((name) => (
           <button
@@ -37,7 +39,7 @@ const Conversation = ({ setSelectedConversation }) => {
       <section className="conversations">
         {conversations.map(({ type, sender, id, title, body, time, haveAttachment, newNotification }, index) => (
           <ConversationItem
-            onClick={() => setSelectedConversation(conversations[index])}
+            onClick={() => setSelectedConversation(conversations[index], true)}
             key={id}
             tabIndex={index}
             type={type}

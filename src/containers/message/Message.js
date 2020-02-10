@@ -9,15 +9,20 @@ import MessageSection from '../message-section/MessageSection';
 import CommentSection from './../comment-section/CommentSection';
 import ServiceContext from './../../ServiceContext';
 
-const Message = ({ selectedConversation }) => {
+const Message = ({ selectedConversation, status, setHideComments, setHideConversation, hideComments }) => {
   const [messages, setMessages] = useState([]);
   const [selectedMessageId, setSelectedMessageId] = useState('');
+
   const service = useContext(ServiceContext);
 
   const { id: conversationId } = selectedConversation;
 
   const handleSelectedMessageId = (mId) => {
-    if (mId !== conversationId) setSelectedMessageId(mId);
+    if (mId !== conversationId) {
+      setSelectedMessageId(mId);
+      setHideComments(false);
+      setHideConversation(false);
+    }
   };
 
   useEffect(() => {
@@ -32,7 +37,7 @@ const Message = ({ selectedConversation }) => {
   }, [conversationId, service, setMessages, setSelectedMessageId]);
 
   return (
-    <section className="main__message">
+    <section className={`main__message ${!status ? 'close' : ''}`}>
       <section className="message-control">
         <div className="left">
           <button type="button">
@@ -69,9 +74,13 @@ const Message = ({ selectedConversation }) => {
           messages={messages}
           selectedConversation={selectedConversation}
           setSelectedMessageId={handleSelectedMessageId}
+          toggleDisplay={hideComments}
         />
 
-        <CommentSection selectedMessageId={selectedMessageId} />
+        <CommentSection
+          selectedMessageId={selectedMessageId}
+          toggleDisplay={hideComments}
+        />
       </section>
     </section>
   );

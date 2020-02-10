@@ -5,7 +5,7 @@ import paperPlane from '../../assets/imgs/paper-plane.svg';
 import CommentItem from './../../components/comment-item/CommentItem';
 import ServiceContext from '../../ServiceContext';
 
-const CommentSection = ({ selectedMessageId }) => {
+const CommentSection = ({ selectedMessageId, toggleDisplay }) => {
   const [comments, setComments] = useState([]);
   const service = useContext(ServiceContext);
 
@@ -14,7 +14,7 @@ const CommentSection = ({ selectedMessageId }) => {
   }, [service, setComments, selectedMessageId]);
 
   return (
-    <div className="comment-list">
+    <div className={`comment-list ${toggleDisplay ? 'close' : ''}`}>
       <h5>Comments</h5>
 
       {comments.map(({ id, image, body }) => (

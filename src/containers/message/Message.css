@@ -36,3 +36,16 @@
   margin-left: .375rem;
   font-size: .75rem;
 }
+@media (max-width: 767px) {
+  .message > .close {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 968px) {
+  .message > .close {
+    display: none;
+  }
+  .message > .message-list {
+    display: block;
+  }
+}

@@ -31,6 +31,9 @@
   font-size: .75rem;
   color: #595e8a;
 }
+.conversation__meta {
+  margin-left: auto;
+}
 .conversation__meta > .time {
   text-align: right;
   color: #5e6c84;

@@ -1,3 +1,25 @@
+.main__conversations > .filter-controls {
+  padding-bottom: .75rem;
+  padding-top: .75rem;
+  padding-right: 1.3125rem;
+  padding-left: 1.3125rem;
+  border: 1px solid #e9edf0;
+  border-left-width: 0;
+  border-right-width: 0;
+  font-size: .75rem;
+  display: flex;
+}
+@media (min-width: 768px) and (max-width: 968px) {
+  .main__conversations > .filter-controls {
+    padding-bottom: 0.78125rem;
+    padding-top: 0.78125rem;
+  }
+}
+.main__conversations > .conversations {
+  padding-right: 1.78125rem;
+  padding-left: 1.3125rem;
+  padding-top: 1.1875rem;
+}
 .filter-controls-item {
   padding: .125rem .6875rem;
   border-radius: .5625rem;

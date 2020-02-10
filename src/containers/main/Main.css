@@ -2,12 +2,41 @@
   flex: 1;
   padding-top: 1.3125rem;
 }
-.main > h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
+.main > div {
+  display: flex;
+  align-items: center;
+}
+.main > div {
   padding: 0.15625rem 0;
   padding-left: 1.3125rem;
   margin-bottom: .5rem;
+}
+.main > div > button {
+  padding: 0;
+  border: none;
+  margin-right: 1rem;
+  background-color: transparent;
+  display: none;
+}
+@media (max-width: 767px) {
+  .main > div > button {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 968px) {
+  .main > div > button {
+    display: block;
+  }
+}
+.main > div > .hide {
+  display: none;
+}
+.main > div > button > img {
+  height: 2.5rem;
+}
+.main > div > h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 .main > .main__body {
   display: flex;
@@ -16,22 +45,6 @@
   display: flex;
   flex-direction: column;
   border-right: 1px solid #e9edf0;
-}
-.main__conversations > .filter-controls {
-  padding-bottom: .75rem;
-  padding-top: .75rem;
-  padding-right: 1.3125rem;
-  padding-left: 1.3125rem;
-  border: 1px solid #e9edf0;
-  border-left-width: 0;
-  border-right-width: 0;
-  font-size: .75rem;
-  display: flex;
-}
-.main__conversations > .conversations {
-  padding-right: 1.78125rem;
-  padding-left: 1.3125rem;
-  padding-top: 1.1875rem;
 }
 .main__body > .main__message {
   flex: 1;
@@ -48,4 +61,22 @@
 }
 .main__message > .message {
   display: flex;
+}
+
+@media (max-width: 767px) {
+  .main__body > .close {
+    display: none;
+  }
+  .main__body > .main__conversations,
+  .main__body > .main__message {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 968px) {
+  .main__body > .m-close {
+    display: none;
+  }
+  .main__body > .main__message {
+    display: block;
+  }
 }

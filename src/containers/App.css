@@ -1,3 +1,9 @@
 .aside-main {
   display: flex;
 }
+
+@media (max-width: 767px) {
+  .aside-main {
+    flex-direction: column;
+  }
+}
