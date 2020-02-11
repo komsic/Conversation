@@ -21,7 +21,7 @@ const Message = ({ selectedConversation, status, setHideComments, setHideConvers
     if (mId !== conversationId) {
       setSelectedMessageId(mId);
       setHideComments(false);
-      setHideConversation(false);
+      setHideConversation(true);
     }
   };
 
