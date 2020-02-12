@@ -33,7 +33,7 @@ const Main = () => {
       <div>
         <button
           type="button"
-          className={(!hideConversation && hideComments) ? 'hide' : ''}
+          className={`${!hideConversation ? 's-hide' : ''} ${hideComments ? 'm-hide' : ''}`}
           onClick={() => handleBackButtonClick()}
         >
           <img src={backArrow} alt="back button"/>

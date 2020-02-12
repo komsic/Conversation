@@ -18,18 +18,20 @@
   background-color: transparent;
   display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 968px) {
   .main > div > button {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  .main > div > .s-hide {
+    display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 968px) {
-  .main > div > button {
-    display: block;
+  .main > div > .m-hide {
+    display: none;
   }
-}
-.main > div > .hide {
-  display: none;
 }
 .main > div > button > img {
   height: 2.5rem;
