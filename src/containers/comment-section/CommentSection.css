@@ -23,6 +23,7 @@
 
   display: flex;
   align-items: flex-end;
+  margin-top: 4rem;
 }
 .comment-compose > div {
   position: relative;

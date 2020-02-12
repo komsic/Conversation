@@ -43,7 +43,10 @@ const MessageSection = ({
           name="message"placeholder="Type a messages…"
         />
 
-        <img src={attachment} alt="attachment"/>
+        <label htmlFor="m-compose">
+          <img src={attachment} alt="attachment"/>
+        </label>
+        <input type="file" name="m-compose" id="m-compose"/>
       </div>
     </div>
   );

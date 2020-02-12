@@ -20,6 +20,11 @@
   padding: 1rem;
   position: relative;
 }
+.message-list > .message__compose > label {
+  position: absolute;
+  bottom: 1.1875rem;
+  left: 1rem;
+}
 .message-list > .message__compose > textarea {
   width: 100%;
   font-size: .875rem;
@@ -33,8 +38,6 @@
 .message-list > .message__compose > textarea::placeholder {
   color: #595e8a;
 }
-.message__compose > img {
-  position: absolute;
-  bottom: 1.1875rem;
-  left: 1rem;
+#m-compose {
+  display: none;
 }
