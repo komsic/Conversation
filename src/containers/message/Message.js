@@ -26,7 +26,7 @@ const Message = ({ selectedConversation, status, setHideComments, setHideConvers
   };
 
   useEffect(() => {
-    const messes = [...service.getCoversationMessages(conversationId)];
+    const messes = [...service.getConversationMessages(conversationId)];
     setMessages(messes);
 
     if (messes.length > 0) {

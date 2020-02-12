@@ -29,7 +29,7 @@ const ConversationItem = ({
 
       <p className="title">{`${title.substring(0, 38)}...`}</p>
 
-      <p className="body">{body}</p>
+      <p className="body">{body.substring(0, 45)}</p>
     </div>
 
     <div className="conversation__meta">
