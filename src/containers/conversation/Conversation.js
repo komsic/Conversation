@@ -40,7 +40,7 @@ const Conversation = ({
 
       <section className="conversations">
         {conversations.map(({
-          type, sender, id, title, body, time, haveAttachment, newNotification,
+          type, sender, id, title, body, time, hasAttachment, newNotification,
         }, index) => (
           <ConversationItem
             onClick={() => setSelectedConversation(conversations[index], true)}
@@ -51,7 +51,7 @@ const Conversation = ({
             title={title}
             body={body}
             time={time}
-            haveAttachment={haveAttachment}
+            hasAttachment={hasAttachment}
             newNotification={newNotification}
           />
         ))}

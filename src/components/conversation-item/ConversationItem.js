@@ -19,7 +19,7 @@ const getImageType = (type) => {
 };
 
 const ConversationItem = ({
-  type, sender, title, body, time, haveAttachment, newNotification, tabIndex, onClick,
+  type, sender, title, body, time, hasAttachment, newNotification, tabIndex, onClick,
 }) => (
   <div className="conversations__item" tabIndex={tabIndex} onClick={onClick} role="menuitem">
     <img src={getImageType(type)} alt="social" />
@@ -37,7 +37,7 @@ const ConversationItem = ({
 
       {newNotification > 0 && <div><span className="notification">{newNotification}</span></div>}
 
-      {haveAttachment && <div><img src={attachment} alt="attachment" /></div>}
+      {hasAttachment && <div><img src={attachment} alt="attachment" /></div>}
     </div>
   </div>
 );
