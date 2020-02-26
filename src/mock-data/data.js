@@ -12,7 +12,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'open'
+      filter: 'open',
     },
     {
       type: 'whatsapp',
@@ -23,7 +23,7 @@ const data = {
       time: '19hrs',
       haveAttachment: true,
       newNotification: 0,
-      filter: 'open'
+      filter: 'open',
     },
     {
       type: 'apple',
@@ -34,7 +34,7 @@ const data = {
       time: '19hrs',
       haveAttachment: true,
       newNotification: 0,
-      filter: 'open'
+      filter: 'open',
     },
     {
       type: 'twitter',
@@ -45,7 +45,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'open'
+      filter: 'open',
     },
     {
       type: 'apple',
@@ -56,7 +56,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 2,
-      filter: 'open'
+      filter: 'open',
     },
     {
       type: 'apple',
@@ -67,7 +67,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'archived'
+      filter: 'archived',
     },
     {
       type: 'twitter',
@@ -78,7 +78,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'archived'
+      filter: 'archived',
     },
     {
       type: 'whatsapp',
@@ -89,7 +89,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'snoozed'
+      filter: 'snoozed',
     },
     {
       type: 'apple',
@@ -100,7 +100,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'snoozed'
+      filter: 'snoozed',
     },
     {
       type: 'twitter',
@@ -111,7 +111,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'trash'
+      filter: 'trash',
     },
     {
       type: 'whatsapp',
@@ -122,7 +122,7 @@ const data = {
       time: '19hrs',
       haveAttachment: false,
       newNotification: 0,
-      filter: 'trash'
+      filter: 'trash',
     },
   ],
   messages: [

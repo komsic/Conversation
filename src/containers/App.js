@@ -16,6 +16,6 @@ function App() {
       </section>
     </div>
   );
-};
+}
 
 export default App;

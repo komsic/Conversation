@@ -14,14 +14,14 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img src={logo} alt="logo"/>
+      <img src={logo} alt="logo" />
 
       <div className="header__more">
         <p className="organization-logo">{organizationName[0]}</p>
 
         <p className="organization-name">{organizationName}</p>
 
-        <img src={dropdown} alt="dropdown"/>
+        <img src={dropdown} alt="dropdown" />
       </div>
     </header>
   );

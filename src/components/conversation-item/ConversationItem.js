@@ -15,14 +15,14 @@ const getImageType = (type) => {
       return appleLogo;
     default:
       return twitterLogo;
-  };
+  }
 };
 
 const ConversationItem = ({
   type, sender, title, body, time, haveAttachment, newNotification, tabIndex, onClick,
 }) => (
-  <div className="conversations__item" tabIndex={tabIndex} onClick={onClick}>
-    <img src={getImageType(type)} alt="social"/>
+  <div className="conversations__item" tabIndex={tabIndex} onClick={onClick} role="menuitem">
+    <img src={getImageType(type)} alt="social" />
 
     <div className="conversation__body">
       <h3 className="sender">{sender}</h3>
@@ -37,7 +37,7 @@ const ConversationItem = ({
 
       {newNotification > 0 && <div><span className="notification">{newNotification}</span></div>}
 
-      {haveAttachment && <div><img src={attachment} alt="attachment"/></div>}
+      {haveAttachment && <div><img src={attachment} alt="attachment" /></div>}
     </div>
   </div>
 );

@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
 import './MessageSection.css';
-import MessageItem from './../../components/message-item/MessageItem';
+import MessageItem from '../../components/message-item/MessageItem';
 import attachment from '../../assets/imgs/attachment.svg';
 
 const MessageSection = ({
   messages, toggleDisplay, setSelectedMessageId, selectedConversation: {
-  sender, id, title, body, time,
-} }) => {
+    sender, id, title, body, time,
+  },
+}) => {
   const messageCompose = useRef(null);
 
   const onMessageReplyClick = () => {
@@ -23,12 +24,14 @@ const MessageSection = ({
         time,
         author: sender,
         main: true,
-      }, ...messages].map(({ id: mId, author, body, time, receipt, main }, index) => (
+      }, ...messages].map(({
+        id: mId, author, body: b, time: t, receipt, main,
+      }, index) => (
         <MessageItem
           key={mId}
           author={author}
-          body={body}
-          time={time}
+          body={b}
+          time={t}
           receipt={receipt}
           main={main}
           tabIndex={index}
@@ -40,16 +43,17 @@ const MessageSection = ({
       <div className="message__compose">
         <textarea
           ref={messageCompose}
-          name="message"placeholder="Type a messages…"
+          name="message"
+          placeholder="Type a messages…"
         />
 
         <label htmlFor="m-compose">
-          <img src={attachment} alt="attachment"/>
+          <img src={attachment} alt="attachment" />
         </label>
-        <input type="file" name="m-compose" id="m-compose"/>
+        <input type="file" name="m-compose" id="m-compose" />
       </div>
     </div>
   );
-}
+};
 
 export default MessageSection;

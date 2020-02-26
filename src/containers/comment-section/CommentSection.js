@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import './CommentSection.css';
 import profileLogo from '../../assets/imgs/komsic.jpg';
 import paperPlane from '../../assets/imgs/paper-plane.svg';
-import CommentItem from './../../components/comment-item/CommentItem';
+import CommentItem from '../../components/comment-item/CommentItem';
 import ServiceContext from '../../ServiceContext';
 
 const CommentSection = ({ selectedMessageId, toggleDisplay }) => {
@@ -31,7 +31,7 @@ const CommentSection = ({ selectedMessageId, toggleDisplay }) => {
         <img src={profileLogo} alt="profile" />
 
         <div>
-          <input type="text" name="comment" placeholder="Write your comment…"/>
+          <input type="text" name="comment" placeholder="Write your comment…" />
 
           <div><img src={paperPlane} alt="send" /></div>
         </div>

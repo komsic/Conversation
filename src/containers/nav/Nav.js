@@ -8,19 +8,19 @@ import comment from '../../assets/imgs/comment.svg';
 const Nav = () => (
   <aside className="menu">
     <a href="#analytics" className="menu__item">
-      <img src={analytics} alt="analytics menu item"/>
+      <img src={analytics} alt="analytics menu item" />
     </a>
 
     <a href="#happy" className="menu__item">
-      <img src={happy} alt="happy menu item"/>
+      <img src={happy} alt="happy menu item" />
     </a>
 
     <a href="#schedule" className="menu__item">
-      <img src={schedule} alt="schedule menu item"/>
+      <img src={schedule} alt="schedule menu item" />
     </a>
 
     <a href="#comment" className="menu__item">
-      <img src={comment} alt="comment menu item"/>
+      <img src={comment} alt="comment menu item" />
     </a>
   </aside>
 );

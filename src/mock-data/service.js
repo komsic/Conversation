@@ -7,7 +7,7 @@ class Service {
   }
 
   getConservations(filter) {
-    if (!filter)  return this.data.conversions;
+    if (!filter) return this.data.conversions;
 
     return this.data.conversations.filter(({ filter: f }) => filter === f);
   }
@@ -19,7 +19,7 @@ class Service {
       conversations: this.data.conversations.map((c) => {
         const { id } = c;
         if (id === conversationId) {
-            return {
+          return {
             ...c,
             newNotification: 0,
           };
