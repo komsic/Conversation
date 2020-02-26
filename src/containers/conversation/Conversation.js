@@ -1,9 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import './Conversation.css';
-import ConversationItem from './../../components/conversation-item/ConversationItem';
-import ServiceContext from './../../ServiceContext';
+import ConversationItem from '../../components/conversation-item/ConversationItem';
+import ServiceContext from '../../ServiceContext';
 
-const Conversation = ({ setSelectedConversation, sStatus, mStatus, selectedConversation }) => {
+const Conversation = ({
+  setSelectedConversation, sStatus, mStatus, selectedConversation,
+}) => {
   const [conversations, setConversations] = useState([]);
   const [filter, setFilter] = useState('open');
   const service = useContext(ServiceContext);
@@ -37,7 +39,9 @@ const Conversation = ({ setSelectedConversation, sStatus, mStatus, selectedConve
       </section>
 
       <section className="conversations">
-        {conversations.map(({ type, sender, id, title, body, time, haveAttachment, newNotification }, index) => (
+        {conversations.map(({
+          type, sender, id, title, body, time, haveAttachment, newNotification,
+        }, index) => (
           <ConversationItem
             onClick={() => setSelectedConversation(conversations[index], true)}
             key={id}

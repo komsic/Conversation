@@ -6,10 +6,12 @@ import archive from '../../assets/imgs/archive.svg';
 import more from '../../assets/imgs/more.svg';
 import profileLogo from '../../assets/imgs/komsic.jpg';
 import MessageSection from '../message-section/MessageSection';
-import CommentSection from './../comment-section/CommentSection';
-import ServiceContext from './../../ServiceContext';
+import CommentSection from '../comment-section/CommentSection';
+import ServiceContext from '../../ServiceContext';
 
-const Message = ({ selectedConversation, status, setHideComments, setHideConversation, hideComments }) => {
+const Message = ({
+  selectedConversation, status, setHideComments, setHideConversation, hideComments,
+}) => {
   const [messages, setMessages] = useState([]);
   const [selectedMessageId, setSelectedMessageId] = useState('');
 

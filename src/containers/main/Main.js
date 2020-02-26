@@ -36,7 +36,7 @@ const Main = () => {
           className={`${!hideConversation ? 's-hide' : ''} ${hideComments ? 'm-hide' : ''}`}
           onClick={() => handleBackButtonClick()}
         >
-          <img src={backArrow} alt="back button"/>
+          <img src={backArrow} alt="back button" />
         </button>
         <h1>Conversations</h1>
       </div>
