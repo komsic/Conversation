@@ -49,7 +49,10 @@ class Service {
   }
 
   addMessage(message) {
-    this.data.messages.push({ ...message, id: uuid() });
+    const newMessage = { ...message, id: uuid() };
+    this.data.messages.push(newMessage);
+
+    return newMessage;
   }
 }
 

@@ -13,7 +13,7 @@
 }
 .message-list > .message__compose {
   margin-top: 6.625rem;
-  height: 5.3125rem;
+  height: 5.8125rem;
   border-radius: .625rem;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
   border: 1px solid #e9edf0;
@@ -24,6 +24,13 @@
   position: absolute;
   bottom: 1.1875rem;
   left: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+.message-list > .message__compose > label > span {
+  margin-left: 0.25rem;
+  font-size: .875rem;
 }
 .message-list > .message__compose > textarea {
   width: 100%;
@@ -37,6 +44,17 @@
 }
 .message-list > .message__compose > textarea::placeholder {
   color: #595e8a;
+}
+.message__compose > .message__send {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  background-color: #6554c0;
+  border: none;
+  border-radius: .5rem;
+  color: white;
+  padding: .25rem .5rem;
+  font-size: .875rem;
 }
 #m-compose {
   display: none;

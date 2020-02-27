@@ -74,6 +74,8 @@ const Message = ({
       <section className="message">
         <MessageSection
           messages={messages}
+          setMessageList={setMessages}
+          conversationId={conversationId}
           selectedConversation={selectedConversation}
           setSelectedMessageId={handleSelectedMessageId}
           toggleDisplay={hideComments}

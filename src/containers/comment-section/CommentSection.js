@@ -51,6 +51,7 @@ const CommentSection = ({ selectedMessageId, toggleDisplay }) => {
             placeholder="Write your comment…"
             value={newComment}
             onChange={({ target: { value } }) => setNewComment(value)}
+            required
           />
 
           <button type="submit">
