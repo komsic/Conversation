@@ -1,4 +1,4 @@
-import uuid from 'uuid/v1';
+import { v4 as uuid } from 'uuid';
 import data from './data';
 
 class Service {
@@ -42,7 +42,10 @@ class Service {
   }
 
   addComment(comment) {
-    this.data.comments.push({ ...comment, id: uuid() });
+    const newComment = { ...comment, id: uuid() };
+    this.data.comments.push(newComment);
+
+    return newComment;
   }
 
   addMessage(message) {

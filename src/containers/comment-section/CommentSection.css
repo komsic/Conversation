@@ -25,12 +25,12 @@
   align-items: flex-end;
   margin-top: 4rem;
 }
-.comment-compose > div {
+.comment-compose > form {
   position: relative;
   flex: 1;
   margin-left: .3125rem;
 }
-.comment-compose > div > input {
+.comment-compose > form > input {
   width: 100%;
   padding: .625rem .6875rem;
   border-radius: 1.5rem;
@@ -38,7 +38,7 @@
   border: none;
   font-size: .75rem;
 }
-.comment-compose > div > div {
+.comment-compose > form > button {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
   background-color: #6554c0;
   padding: .375rem;
@@ -46,8 +46,9 @@
   position: absolute;
   right: 1.0625rem;
   top: .375rem;
+  border: none;
 }
-.comment-compose > div > div > img {
+.comment-compose > form > button > img {
   height: .5625rem;
   margin-top: 0;
 }
@@ -58,7 +59,4 @@
     padding-right: 1rem;
     padding-left: 1.625rem;
   }
-}
-@media (min-width: 768px) and (max-width: 968px) {
-
 }

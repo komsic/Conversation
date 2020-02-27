@@ -7,11 +7,25 @@ import ServiceContext from '../../ServiceContext';
 
 const CommentSection = ({ selectedMessageId, toggleDisplay }) => {
   const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState('');
   const service = useContext(ServiceContext);
 
   useEffect(() => {
     setComments([...service.getMessageComments(selectedMessageId)]);
   }, [service, setComments, selectedMessageId]);
+
+  const handleAddNewComment = (event) => {
+    event.preventDefault();
+
+    const nc = service.addComment({
+      parentId: selectedMessageId,
+      image: profileLogo,
+      body: newComment,
+    });
+    setComments([...comments, nc]);
+
+    setNewComment('');
+  };
 
   return (
     <div className={`comment-list ${toggleDisplay ? 'close' : ''}`}>
@@ -30,11 +44,19 @@ const CommentSection = ({ selectedMessageId, toggleDisplay }) => {
       <div className="comment-compose">
         <img src={profileLogo} alt="profile" />
 
-        <div>
-          <input type="text" name="comment" placeholder="Write your comment…" />
+        <form onSubmit={handleAddNewComment}>
+          <input
+            type="text"
+            name="comment"
+            placeholder="Write your comment…"
+            value={newComment}
+            onChange={({ target: { value } }) => setNewComment(value)}
+          />
 
-          <div><img src={paperPlane} alt="send" /></div>
-        </div>
+          <button type="submit">
+            <img src={paperPlane} alt="send" />
+          </button>
+        </form>
       </div>
     </div>
   );
